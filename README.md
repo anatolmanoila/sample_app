@@ -1,3 +1,3 @@
 # Ruby on Rails: sample application
 
-This is a sample application. Details later...
+This is a sample application. 
