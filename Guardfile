@@ -1,5 +1,6 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
+<<<<<<< HEAD
 require 'active_support/core_ext'
 
 guard 'spork', :rspec_env => { 'RAILS_ENV' => 'test' } do
@@ -15,6 +16,10 @@ guard 'spork', :rspec_env => { 'RAILS_ENV' => 'test' } do
 end
 
 guard 'rspec', :version => 2, :all_after_pass => false, :cli => '--drb' do
+=======
+
+guard 'rspec', :version => 2 do
+>>>>>>> filling-in-layout
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
@@ -35,6 +40,7 @@ guard 'rspec', :version => 2, :all_after_pass => false, :cli => '--drb' do
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }
 end
 
+<<<<<<< HEAD
 
 guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' }, :rspec_env => { 'RAILS_ENV' => 'test' } do
   watch('config/application.rb')
@@ -47,3 +53,5 @@ guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' }, :rspec_env => { 'RAIL
   watch('test/test_helper.rb') { :test_unit }
   watch(%r{features/support/}) { :cucumber }
 end
+=======
+>>>>>>> filling-in-layout
